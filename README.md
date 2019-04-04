@@ -2,6 +2,9 @@ bastion_IP = 35.195.162.201
 someinternalhost_IP = 10.132.0.6
 
  ДЗ №3
+ - Зарегистрировался в GCP
+ - Создал машины bastion и someinternalhost
+ - установил и сконфигурировал OpenVPNсервер Pritunl
 
 способ подключения к someinternalhost в одну команду из вашего рабочего устройства
  ssh -i ~/.ssh/appuser -A appuser@35.195.162.201 ssh appuser@10.132.0.6
