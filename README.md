@@ -9,10 +9,7 @@ someinternalhost_IP = 10.132.0.6
 #способ подключения к someinternalhost в одну команду из вашего рабочего устройства
  ssh -i ~/.ssh/appuser -A appuser@35.195.162.201 ssh appuser@10.132.0.6
 
-# вариант решения для подключения из консоли при
-# помощи команды вида ssh someinternalhost из локальной
-# консоли рабочего устройства, чтобы подключение выполнялось по
-# алиасу someinternalhost
+# вариант решения для подключения из консоли при  помощи команды вида ssh someinternalhost из локальной консоли рабочего устройства, чтобы подключение выполнялось по алиасу someinternalhost
 
 # 1. добавляем алиас на бастионе
  10.132.0.6 someinternalhost >> /etc/hosts 
@@ -24,3 +21,4 @@ alias "ssh_someinternalhost"="ssh -i ~/.ssh/appuser -A appuser@35.195.162.201 ss
 
 # 3. Запускаем на рабочем устройстве 
  ssh_someinternalhost
+ 
