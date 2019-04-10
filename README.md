@@ -1,7 +1,7 @@
 bastion_IP = 35.195.162.201
 someinternalhost_IP = 10.132.0.6
 
-testapp_IP = 35.204.9.206
+testapp_IP = 35.204.139.84
 testapp_port = 9292
 
  ДЗ №4
@@ -11,6 +11,10 @@ testapp_port = 9292
  - установил mongoDB
  - задеплоил приложение
  - подготовил bash скрипты
+ - подготовил startup_script и разместил его в bucket
+ - скрипт для запуска из gcloud
+
+ gcloud compute instances create reddit-app --metadata startup-script-url=gs://dzhbanov11_storage/startup_script.sh --boot-disk-size=10GB --image-family ubuntu-1604-lts --image-project=ubuntu-os-cloud --machine-type=g1-small --tags puma-server --restart-on-failure 
  
 
 
@@ -37,6 +41,6 @@ alias "ssh_someinternalhost"="ssh -i ~/.ssh/appuser -A appuser@35.195.162.201 ss
  ssh_someinternalhost
 
 
- 
+
 
 
