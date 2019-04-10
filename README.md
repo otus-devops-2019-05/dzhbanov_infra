@@ -1,6 +1,19 @@
 bastion_IP = 35.195.162.201
 someinternalhost_IP = 10.132.0.6
 
+testapp_IP = 35.204.9.206
+testapp_port = 9292
+
+ ДЗ №4
+ - Установил gcloud
+ - Запустил машину reddit-app
+ - установил ruby и bundler
+ - установил mongoDB
+ - задеплоил приложение
+ - подготовил bash скрипты
+ 
+
+
  ДЗ №3
  - Зарегистрировался в GCP
  - Создал машины bastion и someinternalhost
