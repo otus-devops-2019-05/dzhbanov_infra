@@ -16,6 +16,9 @@ testapp_port = 9292
 
  gcloud compute instances create reddit-app --metadata startup-script-url=gs://dzhbanov11_storage/startup_script.sh --boot-disk-size=10GB --image-family ubuntu-1604-lts --image-project=ubuntu-os-cloud --machine-type=g1-small --tags puma-server --restart-on-failure 
  
+ - скрипт создания firewall
+
+ gcloud compute firewall-rules create default-puma-server --action allow --target-tags puma-server --source-ranges 0.0.0.0/0 --rules tcp:9292
 
 
  ДЗ №3
