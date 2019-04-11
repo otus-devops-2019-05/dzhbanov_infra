@@ -4,6 +4,14 @@ someinternalhost_IP = 10.132.0.6
 testapp_IP = 35.204.139.84
 testapp_port = 9292
 
+ ДЗ №5
+ - установил packer
+ - подготовил образ reddit-base
+ - добавил переменные в файл variables.json
+ - убрал в gitignore variables.json
+
+
+
  ДЗ №4
  - Установил gcloud
  - Запустил машину reddit-app

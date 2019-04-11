@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 echo "first lets update apt"
 sudo apt update
 echo "now lets install ruby and bundler"
