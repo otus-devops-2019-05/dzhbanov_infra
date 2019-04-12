@@ -6,6 +6,7 @@ description = "Region"
 # Значение по умолчанию
 default = "europe-west1"
 }
+
 variable zone {
 description = "zone"
 # Значение по умолчанию
