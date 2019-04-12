@@ -33,6 +33,13 @@ metadata {
 # путь до публичного ключа
 ssh-keys = "appuser:${file("C:/Users/Admin/.ssh/appuser.pub")}"
 }
+
+# добавляем провижонерс 
+provisioner "file" {
+source = "files/puma.service"
+destination = "/tmp/puma.service"
+}
+
 }
 resource "google_compute_firewall" "firewall_puma" {
 name = "allow-puma-default"
