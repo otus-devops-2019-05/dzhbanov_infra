@@ -12,7 +12,7 @@ region = "${var.region}"
 
 resource "google_compute_project_metadata_item" "ssh-keys" {
   key   = "ssh-keys"
-  value = ["appuser:${file("${var.public_key_path}")}", "appuser2:${file("${var.public_key_path}")}"] 
+  value = "appuser:${file("${var.public_key_path}")}" 
 }
 resource "google_compute_instance" "app" {
 name = "reddit-app"
