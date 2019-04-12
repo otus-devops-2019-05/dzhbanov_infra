@@ -11,6 +11,7 @@ testapp_port = 9292
   - добавил переменные
   - задача со (*) добавление двух ключей скриптом в main.tf
   - после добавления ключа через интерфейс и выполнения terraform apply - он удаляется. Остаются только те, что прописаны в main.tf
+  - скрипт:
   resource "google_compute_project_metadata_item" "ssh-keys" {
   key   = "ssh-keys"
   value = "appuser:${file("${var.public_key_path}")} appuser2:${file("${var.public_key_path}")}" 
