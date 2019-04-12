@@ -4,7 +4,7 @@ someinternalhost_IP = 10.132.0.6
 testapp_IP = 35.204.139.84
 testapp_port = 9292
 
- ДЗ №5
+ ДЗ №6
   - установил terraform
   - подготовил скрипты
   - создал инфру
