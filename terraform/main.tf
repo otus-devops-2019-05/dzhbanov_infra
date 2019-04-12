@@ -38,7 +38,7 @@ type = "ssh"
 user = "appuser"
 agent = false
 # путь до приватного ключа
-private_key = "${file("C:/Users/Admin/.ssh/appuser")}"
+private_key = "${file("${var.private_key_path}")}"
 }
 
 # добавляем провижонерс 
