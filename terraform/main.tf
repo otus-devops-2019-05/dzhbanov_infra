@@ -33,6 +33,13 @@ metadata {
 # путь до публичного ключа
 ssh-keys = "appuser:${file("C:/Users/Admin/.ssh/appuser.pub")}"
 }
+connection {
+type = "ssh"
+user = "appuser"
+agent = false
+# путь до приватного ключа
+private_key = "${file("C:/Users/Admin/.ssh/appuser")}"
+}
 
 # добавляем провижонерс 
 provisioner "file" {
