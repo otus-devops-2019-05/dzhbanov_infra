@@ -15,7 +15,7 @@ machine_type = "g1-small"
 zone = "europe-west1-b"
 
 # определяем тэг сети
-tags = "puma-server"
+tags = ["puma-server"]
 # определение загрузочного диска
 boot_disk {
 initialize_params {
