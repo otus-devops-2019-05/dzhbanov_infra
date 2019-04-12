@@ -1,6 +1,6 @@
 terraform {
 # Версия terraform
-required_version = "0.11.7"
+required_version = "0.11.13"
 }
 provider "google" {
 # Версия провайдера
@@ -12,7 +12,7 @@ region = "${var.region}"
 
 resource "google_compute_project_metadata_item" "ssh-keys" {
   key   = "ssh-keys"
-  value = "appuser:${file("${var.public_key_path}")}" 
+  value = "appuser:${file("${var.public_key_path}")} appuser2:${file("${var.public_key_path}")}" 
 }
 resource "google_compute_instance" "app" {
 name = "reddit-app"
