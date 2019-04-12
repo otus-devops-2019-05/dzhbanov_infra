@@ -6,8 +6,8 @@ provider "google" {
 # Версия провайдера
 version = "2.0.0"
 # ID проекта
-project = "infra-235619"
-region = "europe-west-1"
+project = "${var.project}"
+region = "${var.region}"
 }
 resource "google_compute_instance" "app" {
 name = "reddit-app"
@@ -19,7 +19,7 @@ tags = ["reddit-app"]
 # определение загрузочного диска
 boot_disk {
 initialize_params {
-image = "reddit-base-1554979838"
+image = "${var.disk_image}"
 }
 }
 # определение сетевого интерфейса
@@ -31,7 +31,7 @@ access_config {}
 }
 metadata {
 # путь до публичного ключа
-ssh-keys = "appuser:${file("C:/Users/Admin/.ssh/appuser.pub")}"
+ssh-keys = "appuser:${file("${var.public_key_path}")}"
 }
 connection {
 type = "ssh"
