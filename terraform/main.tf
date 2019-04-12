@@ -33,6 +33,7 @@ metadata {
 # путь до публичного ключа
 ssh-keys = "appuser:${file("C:/Users/Admin/.ssh/appuser.pub")}"
 }
+}
 resource "google_compute_firewall" "firewall_puma" {
 name = "allow-puma-default"
 # Название сети, в которой действует правило
@@ -46,5 +47,4 @@ ports = ["9292"]
 source_ranges = ["0.0.0.0/0"]
 # Правило применимо для инстансов с перечисленными тэгами
 target_tags = ["reddit-app"]
-}
 }
