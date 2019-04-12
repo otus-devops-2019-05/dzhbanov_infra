@@ -8,10 +8,11 @@ version = "2.0.0"
 # ID проекта
 project = "${var.project}"
 region = "${var.region}"
-metadata = {
-# путь до публичного ключа который должен пролиться
-ssh-keys = "appuser:${file("${var.public_key_path}")}"
 }
+
+resource "google_compute_project_metadata_item" "ssh-keys" {
+  key   = "ssh-keys"
+  value = "appuser:${file("${var.public_key_path}")}"
 }
 resource "google_compute_instance" "app" {
 name = "reddit-app"
