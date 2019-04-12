@@ -10,6 +10,9 @@ testapp_port = 9292
  - добавил переменные в файл variables.json
  - убрал в gitignore variables.json
 
+ ДЗ №5
+ чтобы убрать ненужные символы из винды выполняем команду
+ cat deploy_test.sh | tr -d '\r' > deploy.sh
 
 
  ДЗ №4
