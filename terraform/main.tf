@@ -29,4 +29,9 @@ network = "default"
 # использовать ephemeral IP для доступа из Интернет
 access_config {}
 }
+metadata {
+# путь до публичного ключа
+ssh-keys = "appuser:${file("C:/Users/Admin/.ssh/appuser.pub")}"
+}
+
 }
