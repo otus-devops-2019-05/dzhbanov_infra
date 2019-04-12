@@ -1,6 +1,7 @@
 project ="infra-tttt"
 disk_image = "reddit-base"
-public_key_path = "C:/Users/Admin/.ssh/appuser.pub"
+public_key_path = "~/.ssh/appuser.pub"
 region = "europe-west1"
-private_key_path = "C:/Users/Admin/.ssh/appuser"
+private_key_path = "~/.ssh/appuser"
 zone = "europe-west1-b"
+
