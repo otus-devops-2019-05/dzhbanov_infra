@@ -5,14 +5,19 @@ testapp_IP = 35.204.139.84
 testapp_port = 9292
 
  ДЗ №5
+  - установил terraform
+  - подготовил скрипты
+  - создал инфру
+  - добавил переменные
+  
+ чтобы убрать ненужные символы из .sh скриптов в винде выполняем команду
+ cat deploy_test.sh | tr -d '\r' > deploy.sh
+
+ ДЗ №5
  - установил packer
  - подготовил образ reddit-base
  - добавил переменные в файл variables.json
  - убрал в gitignore variables.json
-
- ДЗ №5
- чтобы убрать ненужные символы из винды выполняем команду
- cat deploy_test.sh | tr -d '\r' > deploy.sh
 
 
  ДЗ №4
