@@ -11,7 +11,7 @@ region = "${var.region}"
 metadata {
 # путь до публичного ключа который должен пролиться
 ssh-keys = "appuser:${file("${var.public_key_path}")}"
-ssh-keys = "appuser2:${file("${var.public_key_path}")}"
+
 }
 }
 resource "google_compute_instance" "app" {
