@@ -4,12 +4,28 @@ someinternalhost_IP = 10.132.0.6
 testapp_IP = 35.204.139.84
 testapp_port = 9292
 
+ ДЗ №6
+  - установил terraform
+  - подготовил скрипты
+  - создал инфру
+  - добавил переменные
+  - задача со (*) добавление двух ключей скриптом в main.tf
+  - после добавления ключа через интерфейс и выполнения terraform apply - он удаляется. Остаются только те, что прописаны в main.tf
+  - скрипт:
+  resource "google_compute_project_metadata_item" "ssh-keys" {
+  key   = "ssh-keys"
+  value = "appuser:${file("${var.public_key_path}")} appuser2:${file("${var.public_key_path}")}" 
+}
+
+
+ чтобы убрать ненужные символы из .sh скриптов в винде выполняем команду
+ cat deploy_test.sh | tr -d '\r' > deploy.sh
+
  ДЗ №5
  - установил packer
  - подготовил образ reddit-base
  - добавил переменные в файл variables.json
  - убрал в gitignore variables.json
-
 
 
  ДЗ №4
