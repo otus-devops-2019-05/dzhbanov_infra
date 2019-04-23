@@ -1,4 +1,3 @@
-variables.json
 *.tfstate
 *.tfstate.*.backup
 *.tfstate.backup
@@ -6,5 +5,9 @@ variables.json
 .terraform/
 terraform.exe
 deploy_test.sh
+packer.exe
+variables.json
+packer/packer.exe
+./packer.exe
 
 
