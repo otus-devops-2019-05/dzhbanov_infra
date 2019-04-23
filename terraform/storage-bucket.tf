@@ -11,5 +11,5 @@ name = ["storage-bucket-dzhbanov", "storage-bucket-dzhbanov2"]
 }
 output storage-bucket_url {
 value = "${module.storage-bucket.url}"
-}
+} 
 

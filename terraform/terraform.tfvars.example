@@ -5,3 +5,5 @@ region = "europe-west1"
 private_key_path = "~/.ssh/appuser"
 zone = "europe-west1-b"
 
+ 
+ 
