@@ -3,6 +3,14 @@ someinternalhost_IP = 10.132.0.6
 
 testapp_IP = 35.204.139.84
 testapp_port = 9292
+ ДЗ №7
+ - подготовил packer образы db и app.
+ - подготовил окружение terraform stage & prod
+ - подготовил modules для app & db
+ - подготовил module VPC
+ - пареметризовал
+ - подключил module bucket
+
 
  ДЗ №6
   - установил terraform
@@ -27,6 +35,9 @@ testapp_port = 9292
  - добавил переменные в файл variables.json
  - убрал в gitignore variables.json
 
+не забывать валидировать и билдить корректно с указанием файла переменных
+packer validate -var-file=variables.json a
+pp.json
 
  ДЗ №4
  - Установил gcloud
