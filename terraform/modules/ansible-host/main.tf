@@ -18,7 +18,7 @@ ssh-keys = "appuser:${file(var.public_key_path)}"
 }
 
 provisioner "remote-exec" {
-script = "files/ansible_install.sh"
+script = "../../files/ansible_install.sh"
 }
 
 }
