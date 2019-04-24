@@ -16,7 +16,13 @@ access_config = {}
 metadata {
 ssh-keys = "appuser:${file(var.public_key_path)}"
 }
-
+connection {
+type = "ssh"
+user = "appuser"
+agent = false
+# путь до приватного ключа
+private_key = "${file("${var.private_key_path}")}"
+}
 provisioner "remote-exec" {
 script = "../files/ansible_install.sh"
 }
