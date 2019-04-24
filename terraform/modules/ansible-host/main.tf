@@ -18,7 +18,9 @@ ssh-keys = "appuser:${file(var.public_key_path)}"
 }
 }
 
-
+provisioner "remote-exec" {
+script = "files/ansible_install.sh"
+}
 # resource "google_compute_address" "app_ip" { name = "ansible-host-ip" }
 
 
