@@ -30,7 +30,8 @@ module "ansible-host" {
   source          = "../modules/ansible-host"
   public_key_path = "${var.public_key_path}"
   zone            = "${var.zone}"
-  db_disk_image   = "${var.db_disk_image}"
+  db_disk_image   = "${var.app_disk_image}"
+  # использую имедж с app
 }
 
 
