@@ -40,3 +40,7 @@ variable db_disk_image {
   default     = "reddit-db-base"
 }
 
+variable source_ranges {
+  description = "range of ip to connect ssh"
+  default = "37.110.84.33/32"
+}
