@@ -5,7 +5,7 @@ machine_type = "g1-small"
 zone = "${var.zone}"
 tags = ["ansible-host"]
 boot_disk {
-initialize_params { image = "${var.app_disk_image}" }
+initialize_params { image = "${var.ansible-host_disk_image}" }
 }
 network_interface {
 network = "default"
