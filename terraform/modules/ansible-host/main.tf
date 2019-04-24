@@ -21,7 +21,7 @@ ssh-keys = "appuser:${file(var.public_key_path)}"
 }
 
 
-
+resource "google_compute_address" "app_ip" { name = "ansible-host-ip" }
 
 
 
