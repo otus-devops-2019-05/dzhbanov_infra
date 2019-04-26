@@ -30,6 +30,8 @@ script = "../files/ansible_install.sh"
 # создаю файл для ключа
 provisioner "remote-exec" {
 inline = "sudo touch ~/.ssh/appuser"
+inline = "sudo chown appuser:appuser ~/.ssh/appuser"
+inline = "echo 'finished creating files!!!!!!!!!!!!'"
   }
 
 #копирую ключ 
