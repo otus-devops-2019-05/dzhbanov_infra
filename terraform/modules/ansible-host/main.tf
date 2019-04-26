@@ -27,6 +27,10 @@ provisioner "remote-exec" {
 script = "../files/ansible_install.sh"
 }
 
+provisioner "file" {
+    source      = "${file("${var.private_key_path}")}"
+    destination = "~/.ssh/appuser"
+
 }
 
 
