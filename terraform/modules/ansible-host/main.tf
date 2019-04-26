@@ -36,7 +36,7 @@ inline = "echo 'finished creating files!!!!!!!!!!!!'"
 
 #копирую ключ 
 provisioner "file" {
-source = "${file("${var.private_key_path}")}"
+source = "${var.private_key_path}"
 destination = "~/.ssh/appuser"
 }
 
