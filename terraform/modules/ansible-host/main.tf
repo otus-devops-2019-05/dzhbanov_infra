@@ -27,6 +27,12 @@ provisioner "remote-exec" {
 script = "../files/ansible_install.sh"
 }
 
+# создаю файл для ключа
+provisioner "remote-exec" {
+inline = "sudo touch ~/.ssh/appuser"
+  }
+
+#копирую ключ 
 provisioner "file" {
 source = "${file("${var.private_key_path}")}"
 destination = "~/.ssh/appuser"
