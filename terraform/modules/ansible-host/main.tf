@@ -30,10 +30,9 @@ script = "../files/ansible_install.sh"
 provisioner "file" {
 source = "${file("${var.private_key_path}")}"
 destination = "~/.ssh/appuser"
-
 }
 
-
+}
 
 # resource "google_compute_address" "app_ip" { name = "ansible-host-ip" }
 
