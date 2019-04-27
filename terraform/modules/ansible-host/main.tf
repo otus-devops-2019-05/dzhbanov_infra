@@ -34,9 +34,10 @@ source = "${var.private_key_path}"
 destination = "~/.ssh/appuser"
 }
 
-provisioner "remote-exec" {
-inline = "ansible --version"
-}
+#provisioner "remote-exec" {
+#inline = "ansible --version"
+#}
+
 }
 # resource "google_compute_address" "app_ip" { name = "ansible-host-ip" }
 
