@@ -34,9 +34,6 @@ source = "${var.private_key_path}"
 destination = "~/.ssh/appuser"
 }
 
-provisioner "remote-exec" {
-inline = "ansible --version"
-}
 
 provisioner "remote-exec" {
 script = "../files/chmod.sh"
