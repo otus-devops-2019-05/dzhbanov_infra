@@ -23,9 +23,10 @@ agent = false
 # путь до приватного ключа
 private_key = "${file("${var.private_key_path}")}"
 }
-provisioner "remote-exec" {
-script = "../files/ansible_install.sh"
-}
+
+#provisioner "remote-exec" {
+#script = "../files/ansible_install.sh"
+#}
 
 #копирую ключ 
 provisioner "file" {
