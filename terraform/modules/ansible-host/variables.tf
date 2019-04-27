@@ -6,7 +6,7 @@ description = "Zone"
 }
 variable ansible-host_disk_image {
 description = "Disk image for ansible host"
-default = "reddit-app-base"
+default = "Ubuntu 16.04 LTS"
 }
 
 variable private_key_path {
