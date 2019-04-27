@@ -1,7 +1,7 @@
 
 resource "google_compute_instance" "app" {
 name = "ansible-host"
-machine_type = "n1-standart-1"
+machine_type = "n1-standard-2"
 zone = "${var.zone}"
 tags = ["ansible-host"]
 
