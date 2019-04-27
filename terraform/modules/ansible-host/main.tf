@@ -24,9 +24,9 @@ agent = false
 private_key = "${file("${var.private_key_path}")}"
 }
 
-#provisioner "remote-exec" {
-#script = "../files/ansible_install.sh"
-#}
+provisioner "remote-exec" {
+script = "../files/ansible_install.sh"
+}
 
 #копирую ключ 
 provisioner "file" {
@@ -34,9 +34,13 @@ source = "${var.private_key_path}"
 destination = "~/.ssh/appuser"
 }
 
-#provisioner "remote-exec" {
-#inline = "ansible --version"
-#}
+provisioner "remote-exec" {
+inline = "ansible --version"
+}
+
+provisioner "remote-exec" {
+script = "../files/chmod.sh"
+}
 
 }
 # resource "google_compute_address" "app_ip" { name = "ansible-host-ip" }
