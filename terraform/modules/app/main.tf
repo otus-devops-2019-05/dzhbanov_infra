@@ -13,8 +13,10 @@ access_config = {
 nat_ip = "${google_compute_address.app_ip.address}"
 }
 }
+
 metadata {
 ssh-keys = "appuser:${file(var.public_key_path)}"
+
 }
 }
 resource "google_compute_address" "app_ip" { name = "reddit-app-ip" }

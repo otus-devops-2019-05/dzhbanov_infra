@@ -26,6 +26,17 @@ module "db" {
   db_disk_image   = "${var.db_disk_image}"
 }
 
+module "ansible-host" {
+  source          = "../modules/ansible-host"
+  public_key_path = "${var.public_key_path}"
+  private_key_path = "${var.private_key_path}"
+  zone            = "${var.zone}"
+  ansible-host_disk_image   = "${var.ansible-host_disk_image}"
+  ansible_path = "${var.ansible_path}"
+  # использую имедж с app
+}
+
+
 module "vpc" {
   source        = "../modules/vpc"
   source_ranges = ["0.0.0.0/0"]
