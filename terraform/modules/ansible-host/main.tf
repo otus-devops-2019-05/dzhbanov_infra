@@ -1,7 +1,7 @@
 
 resource "google_compute_instance" "app" {
 name = "ansible-host"
-machine_type = "n1-standard-2"
+machine_type = "g1-small"
 zone = "${var.zone}"
 tags = ["ansible-host"]
 
@@ -24,9 +24,9 @@ agent = false
 private_key = "${file("${var.private_key_path}")}"
 }
 
-#provisioner "remote-exec" {
-#script = "../files/ansible_install.sh"
-#}
+provisioner "remote-exec" {
+script = "../files/ansible_install.sh"
+}
 
 #копирую ключ 
 provisioner "file" {
