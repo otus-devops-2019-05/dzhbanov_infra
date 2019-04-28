@@ -14,3 +14,6 @@ variable private_key_path {
 description = "Path to the private key used for ssh access"
 }
 
+variable ansible_path {
+  description = "путь до папки с ansible"
+}
