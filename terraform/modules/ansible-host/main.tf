@@ -34,6 +34,12 @@ source = "${var.private_key_path}"
 destination = "~/.ssh/appuser"
 }
 
+#копирую файлы ansible 
+provisioner "file" {
+source = "${var.ansible_path}"
+destination = "~/ansible/"
+}
+
 
 provisioner "remote-exec" {
 script = "../files/chmod.sh"

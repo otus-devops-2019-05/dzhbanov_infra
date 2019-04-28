@@ -44,3 +44,7 @@ variable ansible-host_disk_image {
   description = "Disk image for ansible host"
   default     = "reddit-app-base"
 }
+
+variable ansible_path {
+  description = "путь до папки с ansible"
+}

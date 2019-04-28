@@ -32,7 +32,7 @@ module "ansible-host" {
   private_key_path = "${var.private_key_path}"
   zone            = "${var.zone}"
   ansible-host_disk_image   = "${var.ansible-host_disk_image}"
-
+  ansible_path = "${var.ansible_path}"
   # использую имедж с app
 }
 
