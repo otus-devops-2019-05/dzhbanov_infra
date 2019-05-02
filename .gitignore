@@ -9,5 +9,6 @@ packer.exe
 variables.json
 packer/packer.exe
 ./packer.exe
+*.retry
 
 
