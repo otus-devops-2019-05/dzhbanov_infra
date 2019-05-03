@@ -8,8 +8,8 @@ testapp_port = 9292
  - подготовил плейбуки: один плейбук со множеством команд, несколько плейбуков.
  - подготовил образы packer при помощи provisioners ansible
  - пересоздал инфраструктуру stage
- - выполнил деплой приложения через ansible
- 
+ - выполнил деплой приложения через ansible (site.yml)
+
 
  sudo packer build -var-file='./packer/variables.json' './packer/db.json'
 
