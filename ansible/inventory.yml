@@ -7,5 +7,9 @@ db:
     dbserver:
       ansible_host: 10.132.0.56
 
+ansible:
+  hosts:
+    workstation:
+      ansible_host: 10.132.0.59
 
       

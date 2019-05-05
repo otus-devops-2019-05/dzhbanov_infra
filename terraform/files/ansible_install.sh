@@ -7,3 +7,4 @@ echo "installed python"
 sudo pip install ansible
 mkdir ansible
 #git clone https://github.com/otus-devops-2019-02/dzhbanov_infra.git
+
