@@ -6,6 +6,6 @@
   vars:
     db_host: 10.132.15.209
 
-roles:
-  - app
+  roles:
+    - app
 
