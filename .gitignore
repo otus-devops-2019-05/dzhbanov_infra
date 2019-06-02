@@ -10,5 +10,5 @@ variables.json
 packer/packer.exe
 ./packer.exe
 *.retry
-
+jdauphant.nginx
 
