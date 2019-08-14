@@ -1,0 +1,22 @@
+*.tfstate
+*.tfstate.*.backup
+*.tfstate.backup
+*.tfvars
+.terraform/
+terraform.exe
+deploy_test.sh
+packer.exe
+variables.json
+packer/packer.exe
+./packer.exe
+*.retry
+jdauphant.nginx
+
+# Vagrant & molecule
+.vagrant/
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache
+
