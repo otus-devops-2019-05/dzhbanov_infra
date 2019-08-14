@@ -1,0 +1,27 @@
+---
+- name: Configure ansible
+  hosts: workstation
+  tasks:
+    - name: Copy ansible files
+      become: true
+      copy:
+        src: /home/appuser/ansible
+        dest: /home/appuser
+      tags: ansible-tag
+
+    - name: Copy private key
+      become: true
+      copy:
+        src: /home/appuser/.ssh/appuser
+        dest: /home/appuser/.ssh/appuser
+        mode: '600'
+      tags: ansible-tag
+
+    - name: install ansible
+      become: true
+      pip:
+        name: ansible
+      tags: ansible-tag
+
+
+
